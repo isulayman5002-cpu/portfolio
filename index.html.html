@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Sulayman — Tech Professional</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0A0A0F;
+  --surface:#13131A;
+  --card:#1C1C26;
+  --purple:#7C3AED;
+  --purple-light:#A78BFA;
+  --cyan:#06B6D4;
+  --green:#10B981;
+  --pink:#EC4899;
+  --amber:#F59E0B;
+  --text:#F1F0FF;
+  --muted:#8B8AA0;
+  --border:rgba(124,58,237,0.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 3rem;
+  background:rgba(10,10,15,0.92);
+  border-bottom:0.5px solid var(--border);
+}
+.logo{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);letter-spacing:0.04em}
+.logo span{color:var(--purple-light)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul li a{text-decoration:none;color:var(--muted);font-size:0.82rem;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+nav ul li a:hover{color:var(--purple-light)}
+.nav-hire{background:var(--purple);color:#fff !important;padding:0.45rem 1.1rem;border-radius:6px;font-weight:500;transition:background 0.2s !important}
+.nav-hire:hover{background:#6D28D9 !important}
+
+#hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:8rem 3rem 4rem;
+  background:var(--bg);
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:rgba(124,58,237,0.12);
+  border:0.5px solid rgba(124,58,237,0.4);
+  color:var(--purple-light);
+  font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;
+  padding:0.4rem 1rem;border-radius:100px;
+  margin-bottom:2rem;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+h1{
+  font-family:'Syne',sans-serif;
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  font-weight:800;line-height:1;
+  letter-spacing:-0.03em;
+  margin-bottom:1.5rem;
+  max-width:750px;
+}
+.h1-name{color:var(--text)}
+.h1-accent{color:var(--purple-light)}
+.hero-sub{font-size:1rem;font-weight:300;color:var(--muted);max-width:500px;line-height:1.75;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{
+  background:var(--purple);color:#fff;
+  padding:0.85rem 1.8rem;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:500;
+  letter-spacing:0.04em;border-radius:8px;
+  text-decoration:none;display:inline-block;
+  transition:background 0.2s;
+}
+.btn-primary:hover{background:#6D28D9}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  padding:0.85rem 1.8rem;
+  border:0.5px solid rgba(241,240,255,0.2);
+  cursor:pointer;font-family:'Inter',sans-serif;
+  font-size:0.88rem;font-weight:400;
+  border-radius:8px;text-decoration:none;display:inline-block;
+  transition:border-color 0.2s,color 0.2s;
+}
+.btn-ghost:hover{border-color:var(--purple-light);color:var(--purple-light)}
+.hero-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:3rem}
+.htag{font-size:0.75rem;padding:0.35rem 0.9rem;border-radius:100px;font-weight:400;letter-spacing:0.04em}
+.htag-purple{background:rgba(124,58,237,0.15);color:var(--purple-light);border:0.5px solid rgba(124,58,237,0.3)}
+.htag-cyan{background:rgba(6,182,212,0.12);color:var(--cyan);border:0.5px solid rgba(6,182,212,0.3)}
+.htag-green{background:rgba(16,185,129,0.12);color:var(--green);border:0.5px solid rgba(16,185,129,0.3)}
+.htag-pink{background:rgba(236,72,153,0.12);color:var(--pink);border:0.5px solid rgba(236,72,153,0.3)}
+.htag-amber{background:rgba(245,158,11,0.12);color:var(--amber);border:0.5px solid rgba(245,158,11,0.3)}
+
+section{padding:5rem 3rem}
+.section-label{font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--purple-light);font-weight:500;margin-bottom:0.75rem;display:block}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.1;margin-bottom:0.75rem;letter-spacing:-0.02em}
+
+#about{background:var(--surface)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
+.about-text p{color:var(--muted);line-height:1.85;font-weight:300;font-size:0.95rem;margin-bottom:1rem}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.astat{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center}
+.astat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--purple-light)}
+.astat-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-top:0.25rem}
+
+#services{background:var(--bg)}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
+.service-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.75rem;transition:border-color 0.2s,transform 0.2s;cursor:default}
+.service-card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.service-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1rem}
+.service-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.5rem}
+.service-desc{font-size:0.82rem;color:var(--muted);line-height:1.7}
+.service-tag{display:inline-block;margin-top:1rem;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;padding:0.25rem 0.7rem;border-radius:100px}
+
+#work{background:var(--surface)}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
+.work-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s,transform 0.2s}
+.work-card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.work-preview{height:160px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:linear-gradient(135deg,#1C1C26 0%,#13131A 100%);border-bottom:0.5px solid var(--border);position:relative;overflow:hidden}
+.work-preview-bg{position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(124,58,237,0.03) 20px,rgba(124,58,237,0.03) 21px)}
+.work-preview-label{position:absolute;top:12px;right:12px;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:0.25rem 0.65rem;border-radius:100px;background:rgba(16,185,129,0.15);color:var(--green);border:0.5px solid rgba(16,185,129,0.3)}
+.work-body{padding:1.25rem 1.5rem}
+.work-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem}
+.work-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;margin-bottom:1rem}
+.work-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.1rem}
+.work-tag{font-size:0.65rem;padding:0.2rem 0.6rem;border-radius:100px;text-transform:uppercase;letter-spacing:0.08em}
+.work-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:500;color:var(--purple-light);text-decoration:none;transition:color 0.2s}
+.work-link:hover{color:#fff}
+
+#contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
+.contact-channels{display:flex;flex-direction:column;gap:0.85rem;margin-bottom:1.5rem}
+.channel{display:flex;align-items:center;gap:1rem;background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.2s}
+.channel:hover{border-color:var(--purple);transform:translateX(4px)}
+.channel-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.channel-info{flex:1}
+.channel-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-bottom:0.15rem}
+.channel-val{font-size:0.88rem;color:var(--text);font-weight:500}
+.channel-action{font-size:0.72rem;color:var(--purple-light);font-weight:500;white-space:nowrap}
+.contact-note{font-size:0.76rem;color:var(--muted);line-height:1.6;padding-top:1rem;border-top:0.5px solid var(--border)}
+.contact-note span{color:var(--green);font-weight:500}
+
+.contact-form{display:flex;flex-direction:column;gap:1rem}
+.contact-form h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.25rem}
+.contact-form p{font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;line-height:1.6}
+.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.form-group label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
+.form-group input,.form-group textarea{background:var(--card);border:0.5px solid var(--border);color:var(--text);padding:0.75rem 1rem;font-family:'Inter',sans-serif;font-size:0.88rem;border-radius:8px;outline:none;transition:border-color 0.2s;width:100%}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--purple)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-status{font-size:0.82rem;color:var(--green);margin-top:0.25rem;display:none}
+
+footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--purple-light)}
+.footer-copy{font-size:0.75rem;color:var(--muted)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:0.75rem;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--purple-light)}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  nav ul{display:none}
+  #hero{padding:7rem 1.5rem 3rem}
+  section{padding:4rem 1.5rem}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
+  .about-stats{display:none}
+  .channel-action{display:none}
+  footer{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">IS<span>.</span></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-badge"><span class="dot"></span> Available for new projects</div>
+  <h1>
+    <span class="h1-name">Hi, I'm Ibrahim<br></span>
+    <span class="h1-accent">Tech Professional</span>
+  </h1>
+  <p class="hero-sub">I help individuals and businesses build secure digital solutions, automate workflows with AI, and create intuitive experiences that drive real growth.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Work With Me</a>
+    <a href="#services" class="btn-ghost">See My Services</a>
+  </div>
+  <div class="hero-tags">
+    <span class="htag htag-purple">Cybersecurity</span>
+    <span class="htag htag-cyan">Web Development</span>
+    <span class="htag htag-green">AI Automation</span>
+    <span class="htag htag-pink">UI/UX Design</span>
+    <span class="htag htag-amber">Prompt Engineering</span>
+  </div>
+</section>
+
+<section id="about">
+  <span class="section-label">About Me</span>
+  <h2>Who is Ibrahim?</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I am Ibrahim Sulayman, a Cyber Security student and technology enthusiast specializing in web development, AI business automation, prompt engineering, and digital solutions.</p>
+      <p>I work with individuals and businesses to build secure digital solutions, optimize workflows with AI, and create intuitive user experiences that support growth and long-term success.</p>
+      <p>Every project I take on is treated with precision, creativity, and a deep commitment to delivering real value — not just deliverables.</p>
+      <a href="#contact" class="btn-primary" style="margin-top:0.5rem">Let's Talk</a>
+    </div>
+    <div class="about-stats">
+      <div class="astat"><div class="astat-num">5+</div><div class="astat-label">Specializations</div></div>
+      <div class="astat"><div class="astat-num">AI</div><div class="astat-label">Powered Workflow</div></div>
+      <div class="astat"><div class="astat-num">100%</div><div class="astat-label">Remote Ready</div></div>
+      <div class="astat"><div class="astat-num">24h</div><div class="astat-label">Response Time</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <span class="section-label">What I Do</span>
+  <h2>Services I Offer</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(124,58,237,0.15)">🛡️</div>
+      <div class="service-title">Cybersecurity Advisory</div>
+      <div class="service-desc">Security awareness training, digital safety consulting, and cybersecurity research to help individuals and small businesses stay protected online.</div>
+      <span class="service-tag htag-purple">High Demand</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(6,182,212,0.15)">💻</div>
+      <div class="service-title">Web Development</div>
+      <div class="service-desc">Clean, fast, and professional websites for businesses, portfolios, restaurants, and service providers.</div>
+      <span class="service-tag htag-cyan">Most Popular</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(16,185,129,0.15)">🤖</div>
+      <div class="service-title">AI Business Automation</div>
+      <div class="service-desc">Integrate AI tools into your business workflows to save time, cut costs, and scale operations without extra staff.</div>
+      <span class="service-tag htag-green">High Value</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(245,158,11,0.15)">✍️</div>
+      <div class="service-title">Prompt Engineering</div>
+      <div class="service-desc">Custom AI prompt systems and workflows designed to get maximum output from tools like ChatGPT and Claude.</div>
+      <span class="service-tag htag-amber">Trending</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon" style="background:rgba(236,72,153,0.15)">🎨</div>
+      <div class="service-title">UI/UX Design</div>
+      <div class="service-desc">User-centred interface design that looks great, feels smooth, and converts visitors into loyal customers.</div>
+      <span class="service-tag htag-pink">Creative</span>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <span class="section-label">My Work</span>
+  <h2>Projects I've Built</h2>
+  <div class="work-grid">
+    <div class="work-card">
+      <div class="work-preview">
+        <div class="work-preview-bg"></div>
+        <span style="position:relative;z-index:1;font-size:3rem">🍕</span>
+        <span class="work-preview-label">Live</span>
+      </div>
+      <div class="work-body">
+        <div class="work-title">Bella Napoli Restaurant</div>
+        <div class="work-desc">A full restaurant website featuring a dynamic menu with category filters, reservation form, customer reviews section, and full mobile responsiveness.</div>
+        <div class="work-tags">
+          <span class="work-tag htag-cyan">HTML</span>
+          <span class="work-tag htag-pink">CSS</span>
+          <span class="work-tag htag-amber">JavaScript</span>
+          <span class="work-tag htag-purple">Responsive</span>
+        </div>
+        <a href="https://isulayman5002-cpu.github.io/bella-napoli" target="_blank" class="work-link">View Live Site →</a>
+      </div>
+    </div>
+    <div class="work-card" style="border-style:dashed;opacity:0.6">
+      <div class="work-preview">
+        <div class="work-preview-bg"></div>
+        <span style="position:relative;z-index:1;font-size:3rem">🔧</span>
+      </div>
+      <div class="work-body">
+        <div class="work-title">More Projects Coming Soon</div>
+        <div class="work-desc">Currently building more client-ready samples including a barbershop site and a service provider landing page.</div>
+        <div class="work-tags">
+          <span class="work-tag" style="background:rgba(139,138,160,0.15);color:var(--muted);border:0.5px solid rgba(139,138,160,0.2)">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <span class="section-label">Get In Touch</span>
+  <h2>Let's Work Together</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-channels">
+        <a href="mailto:isulayman5002@gmail.com" class="channel">
+          <div class="channel-icon" style="background:rgba(124,58,237,0.15)">📧</div>
+          <div class="channel-info">
+            <div class="channel-label">Email</div>
+            <div class="channel-val">isulayman5002@gmail.com</div>
+          </div>
+          <div class="channel-action">Send →</div>
+        </a>
+        <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%20found%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project." class="channel" target="_blank">
+          <div class="channel-icon" style="background:rgba(16,185,129,0.15)">💬</div>
+          <div class="channel-info">
+            <div class="channel-label">WhatsApp</div>
+            <div class="channel-val">+234 816 009 5723</div>
+          </div>
+          <div class="channel-action">Chat →</div>
+        </a>
+        <a href="https://t.me/dg_ibrahim00" class="channel" target="_blank">
+          <div class="channel-icon" style="background:rgba(6,182,212,0.15)">✈️</div>
+          <div class="channel-info">
+            <div class="channel-label">Telegram</div>
+            <div class="channel-val">@dg_ibrahim00</div>
+          </div>
+          <div class="channel-action">Message →</div>
+        </a>
+        <a href="https://github.com/isulayman5002-cpu" class="channel" target="_blank">
+          <div class="channel-icon" style="background:rgba(245,158,11,0.15)">🐙</div>
+          <div class="channel-info">
+            <div class="channel-label">GitHub</div>
+            <div class="channel-val">github.com/isulayman5002-cpu</div>
+          </div>
+          <div class="channel-action">View →</div>
+        </a>
+      </div>
+      <div class="contact-note">
+        <span>● Usually responds within 24 hours</span> · Based in Lagos, Nigeria · Open to remote work worldwide
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <p>Prefer to type it out? Fill in the form and it lands directly in my inbox.</p>
+      <form id="contactForm" action="https://formspree.io/f/mbdejgne" method="POST">
+        <div class="form-group" style="margin-bottom:1rem">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem">
+          <label>Your Email</label>
+          <input type="email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem">
+          <label>What do you need?</label>
+          <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%" id="submitBtn">Send Message</button>
+        <div class="form-status" id="formStatus">Message sent! I'll get back to you within 24 hours.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Ibrahim Sulayman</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="https://github.com/isulayman5002-cpu" target="_blank">GitHub</a>
+  </div>
+  <div class="footer-copy">© 2026 · Built with purpose. Open to opportunities.</div>
+</footer>
+
+<script>
+const form = document.getElementById('contactForm');
+const btn = document.getElementById('submitBtn');
+const status = document.getElementById('formStatus');
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.7';
+  btn.disabled = true;
+  const data = new FormData(form);
+  try {
+    const res = await fetch('https://formspree.io/f/mbdejgne', {
+      method: 'POST',
+      body: data,
+      headers: {'Accept': 'application/json'}
+    });
+    if(res.ok){
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = '#059669';
+      btn.style.opacity = '1';
+      status.style.display = 'block';
+      form.reset();
+    } else {
+      btn.textContent = 'Send Message';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+      status.textContent = 'Something went wrong. Please try WhatsApp or Email.';
+      status.style.color = '#EC4899';
+      status.style.display = 'block';
+    }
+  } catch(err){
+    btn.textContent = 'Send Message';
+    btn.style.opacity = '1';
+    btn.disabled = false;
+    status.textContent = 'Something went wrong. Please try WhatsApp or Email.';
+    status.style.color = '#EC4899';
+    status.style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>
