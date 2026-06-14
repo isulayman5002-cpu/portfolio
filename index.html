@@ -16,7 +16,6 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
 
-/* FLOATING WA */
 .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);text-decoration:none;font-size:1.5rem;transition:transform 0.2s}
 .wa-float:hover{transform:scale(1.1)}
 
@@ -31,19 +30,19 @@ nav ul li a:hover{color:var(--purple-light)}
 
 /* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 3rem 4rem;background:var(--bg)}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.12);border:0.5px solid rgba(124,58,237,0.4);color:var(--purple-light);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:2rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.12);border:0.5px solid rgba(124,58,237,0.4);color:var(--purple-light);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.75rem}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);display:inline-block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,7vw,5rem);font-weight:800;line-height:1;letter-spacing:-0.03em;margin-bottom:1rem;max-width:780px}
-.h1-role{color:var(--purple-light);display:block;font-size:clamp(1.1rem,2.5vw,1.5rem);font-weight:600;margin-bottom:0.5rem;letter-spacing:0}
-.hero-sub{font-size:1rem;font-weight:300;color:var(--muted);max-width:520px;line-height:1.8;margin-bottom:2.5rem}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,7vw,5rem);font-weight:800;line-height:1;letter-spacing:-0.03em;margin-bottom:0.6rem;max-width:780px;color:var(--text)}
+.hero-role{font-family:'Syne',sans-serif;font-size:clamp(1rem,2vw,1.25rem);font-weight:600;color:var(--purple-light);margin-bottom:1rem;display:block;letter-spacing:0.01em}
+.hero-desc{font-size:0.95rem;font-weight:300;color:var(--muted);max-width:480px;line-height:1.75;margin-bottom:2.5rem}
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{background:var(--purple);color:#fff;padding:0.85rem 1.8rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:500;border-radius:8px;text-decoration:none;display:inline-block;transition:background 0.2s}
 .btn-primary:hover{background:#6D28D9}
-.btn-ghost{background:transparent;color:var(--text);padding:0.85rem 1.8rem;border:0.5px solid rgba(241,240,255,0.2);cursor:pointer;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:400;border-radius:8px;text-decoration:none;display:inline-block;transition:border-color 0.2s,color 0.2s}
-.btn-ghost:hover{border-color:var(--purple-light);color:var(--purple-light)}
 .btn-wa{background:#25D366;color:#fff;padding:0.85rem 1.8rem;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:500;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:background 0.2s}
 .btn-wa:hover{background:#1EBD5A}
+.btn-ghost{background:transparent;color:var(--text);padding:0.85rem 1.8rem;border:0.5px solid rgba(241,240,255,0.2);cursor:pointer;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:400;border-radius:8px;text-decoration:none;display:inline-block;transition:border-color 0.2s,color 0.2s}
+.btn-ghost:hover{border-color:var(--purple-light);color:var(--purple-light)}
 .hero-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:3rem}
 .htag{font-size:0.75rem;padding:0.35rem 0.9rem;border-radius:100px;font-weight:400;letter-spacing:0.04em}
 .htag-purple{background:rgba(124,58,237,0.15);color:var(--purple-light);border:0.5px solid rgba(124,58,237,0.3)}
@@ -94,7 +93,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 
 /* WORK */
 #work{background:var(--surface);border-top:0.5px solid var(--border)}
-.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:3rem}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
 .work-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s,transform 0.2s}
 .work-card:hover{border-color:var(--purple);transform:translateY(-3px)}
 .work-preview{height:170px;display:flex;align-items:flex-end;justify-content:flex-start;position:relative;overflow:hidden}
@@ -102,7 +101,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .work-preview-emoji{position:relative;z-index:1;font-size:3rem;margin:0 0 0.75rem 1rem}
 .work-status{position:absolute;top:12px;right:12px;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.1em;padding:0.25rem 0.65rem;border-radius:100px}
 .status-live{background:rgba(16,185,129,0.15);color:var(--green);border:0.5px solid rgba(16,185,129,0.3)}
-.status-progress{background:rgba(245,158,11,0.15);color:var(--amber);border:0.5px solid rgba(245,158,11,0.3)}
+.status-sample{background:rgba(6,182,212,0.15);color:var(--cyan);border:0.5px solid rgba(6,182,212,0.3)}
 .work-body{padding:1.5rem}
 .work-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.25rem}
 .work-subtitle{font-size:0.78rem;color:var(--purple-light);margin-bottom:0.75rem;font-weight:500}
@@ -112,21 +111,8 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .work-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:500;color:var(--purple-light);text-decoration:none;transition:color 0.2s}
 .work-link:hover{color:#fff}
 
-/* PRICING */
-#pricing{background:var(--bg)}
-.pricing-note{font-size:0.82rem;color:var(--muted);text-align:center;margin-bottom:3rem}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;max-width:900px;margin:0 auto}
-.pricing-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.75rem;text-align:center;transition:border-color 0.2s}
-.pricing-card:hover{border-color:var(--purple)}
-.pricing-card.featured{border-color:var(--purple);background:rgba(124,58,237,0.08)}
-.pricing-type{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);margin-bottom:0.5rem}
-.pricing-name{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:0.75rem}
-.pricing-amount{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:var(--purple-light);margin-bottom:1rem}
-.pricing-amount span{font-size:0.85rem;font-weight:400;color:var(--muted)}
-.pricing-desc{font-size:0.8rem;color:var(--muted);line-height:1.6}
-
-/* TECH & INDUSTRIES */
-#tech{background:var(--surface);border-top:0.5px solid var(--border)}
+/* TECH */
+#tech{background:var(--bg)}
 .tech-industries-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
 .tech-group-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:1.25rem;color:var(--text)}
 .tech-pills{display:flex;flex-wrap:wrap;gap:0.6rem}
@@ -134,7 +120,7 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .tech-pill:hover{border-color:var(--purple-light);color:var(--purple-light)}
 
 /* CONTACT */
-#contact{background:var(--bg)}
+#contact{background:var(--surface);border-top:0.5px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
 .contact-channels{display:flex;flex-direction:column;gap:0.85rem;margin-bottom:1.5rem}
 .channel{display:flex;align-items:center;gap:1rem;background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;text-decoration:none;transition:border-color 0.2s,transform 0.2s}
@@ -146,15 +132,15 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .channel-action{font-size:0.72rem;color:var(--purple-light);font-weight:500;white-space:nowrap}
 .contact-note{font-size:0.76rem;color:var(--muted);line-height:1.6;padding-top:1rem;border-top:0.5px solid var(--border)}
 .contact-note span{color:var(--green);font-weight:500}
-.contact-form{display:flex;flex-direction:column;gap:1rem}
-.contact-form h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.25rem}
-.contact-form p{font-size:0.82rem;color:var(--muted);margin-bottom:0.5rem;line-height:1.6}
-.form-group{display:flex;flex-direction:column;gap:0.4rem}
+.contact-form-wrap h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.25rem}
+.contact-form-wrap .pricing-line{font-size:0.82rem;color:var(--muted);line-height:1.7;margin-bottom:1.25rem;padding:0.85rem 1rem;background:var(--card);border:0.5px solid var(--border);border-radius:8px;border-left:2px solid var(--purple)}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
 .form-group label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted)}
 .form-group input,.form-group textarea{background:var(--card);border:0.5px solid var(--border);color:var(--text);padding:0.75rem 1rem;font-family:'Inter',sans-serif;font-size:0.88rem;border-radius:8px;outline:none;transition:border-color 0.2s;width:100%}
 .form-group input:focus,.form-group textarea:focus{border-color:var(--purple)}
 .form-group textarea{resize:vertical;min-height:110px}
-.form-status{font-size:0.82rem;color:var(--green);margin-top:0.25rem;display:none}
+.form-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
+.form-status{font-size:0.82rem;color:var(--green);margin-top:0.5rem;display:none}
 
 footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:var(--purple-light)}
@@ -186,7 +172,6 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#work">Work</a></li>
-    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact" class="nav-hire">Hire Me</a></li>
   </ul>
 </nav>
@@ -194,15 +179,12 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
 <!-- HERO -->
 <section id="hero">
   <div class="hero-badge"><span class="dot"></span> Available for new projects</div>
-  <h1>
-    <span class="h1-role">Web Developer & AI Automation Consultant</span>
-    I help businesses build professional websites, automate workflows, and strengthen their digital presence.
-  </h1>
-  <p class="hero-sub">From restaurants to law firms, logistics companies to fashion brands — I design and deliver digital solutions that make businesses look credible and work smarter.</p>
+  <span class="hero-role">Web Developer & AI Automation Consultant</span>
+  <div class="hero-title">Ibrahim<br>Sulayman</div>
+  <p class="hero-desc">I help businesses build professional websites, automate workflows, and strengthen their digital presence.</p>
   <div class="hero-btns">
     <a href="#work" class="btn-primary">See My Work</a>
     <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="btn-wa">💬 Chat on WhatsApp</a>
-    <a href="#contact" class="btn-ghost">Get a Quote</a>
   </div>
   <div class="hero-tags">
     <span class="htag htag-purple">Cybersecurity</span>
@@ -295,7 +277,7 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Modern User Experience</div><div class="why-desc">Clean interfaces that are easy to navigate and make your business look professional.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Fast Delivery</div><div class="why-desc">AI-assisted development means I build faster without sacrificing quality or attention to detail.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">AI-Assisted Development</div><div class="why-desc">I use cutting-edge AI tools to deliver results that would take traditional developers twice as long.</div></div>
-    <div class="why-item"><div class="why-check">✓</div><div class="why-title">Ongoing Support</div><div class="why-desc">I don't disappear after delivery. I offer retainer support so your site stays updated and functional.</div></div>
+    <div class="why-item"><div class="why-check">✓</div><div class="why-title">Ongoing Support</div><div class="why-desc">I don't disappear after delivery. Retainer support keeps your site updated and functional.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Cyber Security Background</div><div class="why-desc">Your website is built with digital safety in mind — not an afterthought, but built in from the start.</div></div>
   </div>
 </section>
@@ -350,12 +332,12 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
       <div class="work-preview" style="background:linear-gradient(135deg,#1A0A00,#3A1800)">
         <div class="work-preview-bg"></div>
         <span class="work-preview-emoji">🏍️</span>
-        <span class="work-status status-live">Live Sample</span>
+        <span class="work-status status-sample">Live Sample</span>
       </div>
       <div class="work-body">
         <div class="work-title">Hamars Ride</div>
         <div class="work-subtitle">Logistics & Delivery Website</div>
-        <div class="work-desc">A delivery company website with a booking request form, service area coverage, customer reviews, a star-rating system, and WhatsApp integration.</div>
+        <div class="work-desc">A delivery company website with a booking request form, service area coverage, customer reviews, star-rating system, and WhatsApp integration.</div>
         <div class="work-features">
           <span class="work-feat">Delivery Booking</span>
           <span class="work-feat">WhatsApp Integration</span>
@@ -370,7 +352,7 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
       <div class="work-preview" style="background:linear-gradient(135deg,#1B2A4A,#2E4373)">
         <div class="work-preview-bg"></div>
         <span class="work-preview-emoji">🛍️</span>
-        <span class="work-status status-progress">In Progress</span>
+        <span class="work-status status-sample">Live Sample</span>
       </div>
       <div class="work-body">
         <div class="work-title">QFW Collectionz</div>
@@ -382,37 +364,10 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
           <span class="work-feat">WhatsApp Checkout</span>
           <span class="work-feat">Wholesale Section</span>
         </div>
-        <span class="work-link" style="cursor:default;opacity:0.5">Coming Live Soon</span>
+        <a href="https://sample-qfw-collectionz.netlify.app" target="_blank" class="work-link">View Live Sample →</a>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <span class="section-label">Pricing</span>
-  <h2>Starting From</h2>
-  <p class="pricing-note">Transparent starting prices. Final quotes depend on your specific requirements — contact me and we'll find what works for your budget.</p>
-  <div class="pricing-grid">
-    <div class="pricing-card">
-      <div class="pricing-type">Simple</div>
-      <div class="pricing-name">Landing Page</div>
-      <div class="pricing-amount">₦120,000 <span>starting from</span></div>
-      <div class="pricing-desc">Single page, clean design, contact form, mobile responsive. Perfect for service providers and personal brands.</div>
-    </div>
-    <div class="pricing-card featured">
-      <div class="pricing-type">Most Popular</div>
-      <div class="pricing-name">Business Website</div>
-      <div class="pricing-amount">₦220,000 <span>starting from</span></div>
-      <div class="pricing-desc">Multi-page site with full branding, forms, social media integration, and deployment. Restaurants, law firms, logistics, fashion and more.</div>
-    </div>
-    <div class="pricing-card">
-      <div class="pricing-type">Custom</div>
-      <div class="pricing-name">Custom Projects</div>
-      <div class="pricing-amount">Request <span>a quote</span></div>
-      <div class="pricing-desc">E-commerce, AI automation, complex workflows, and anything beyond standard website scope. Let's discuss your needs.</div>
-    </div>
   </div>
 </section>
 
@@ -480,23 +435,26 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
       </div>
       <div class="contact-note"><span>● Usually responds within 24 hours</span> · Based in Lagos, Nigeria · Open to remote work worldwide</div>
     </div>
-    <div class="contact-form">
+    <div class="contact-form-wrap">
       <h3>Send a Message</h3>
-      <p>Prefer to type it out? Fill in the form and it lands directly in my inbox.</p>
+      <div class="pricing-line">💡 Pricing is tailored to each project. Get in touch and let's discuss what works for your budget and timeline.</div>
       <form id="contactForm" action="https://formspree.io/f/mbdejgne" method="POST">
-        <div class="form-group" style="margin-bottom:1rem">
+        <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="name" placeholder="John Doe" required>
         </div>
-        <div class="form-group" style="margin-bottom:1rem">
+        <div class="form-group">
           <label>Your Email</label>
           <input type="email" name="email" placeholder="john@example.com" required>
         </div>
-        <div class="form-group" style="margin-bottom:1rem">
+        <div class="form-group">
           <label>What do you need?</label>
           <textarea name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width:100%" id="submitBtn">Send Message</button>
+        <div class="form-btns">
+          <button type="submit" class="btn-primary" style="flex:1" id="submitBtn">Send Message</button>
+          <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20a%20project." target="_blank" class="btn-ghost">Get a Quote →</a>
+        </div>
         <div class="form-status" id="formStatus">Message sent! I'll get back to you within 24 hours.</div>
       </form>
     </div>
@@ -509,7 +467,6 @@ footer{background:var(--surface);padding:2rem 3rem;border-top:0.5px solid var(--
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#work">Work</a>
-    <a href="#pricing">Pricing</a>
     <a href="https://github.com/isulayman5002-cpu" target="_blank">GitHub</a>
   </div>
   <div class="footer-copy">© 2026 · Built with purpose. Open to opportunities.</div>
