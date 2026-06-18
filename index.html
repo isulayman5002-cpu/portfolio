@@ -17,14 +17,11 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
 
-/* SCROLL PROGRESS */
 #progress-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--cyan));z-index:999;width:0%;transition:width 0.1s}
 
-/* FLOATING WA */
 .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:500;width:52px;height:52px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.35);text-decoration:none;font-size:1.4rem;transition:transform 0.2s}
 .wa-float:hover{transform:scale(1.12)}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,15,0.9);border-bottom:0.5px solid var(--border);backdrop-filter:blur(12px)}
 .logo{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);letter-spacing:0.04em}
 .logo span{color:var(--purple-light)}
@@ -34,21 +31,12 @@ nav ul li a:hover{color:var(--purple-light)}
 .nav-hire{background:var(--purple);color:#fff !important;padding:0.4rem 1.1rem;border-radius:6px;font-weight:500 !important}
 .nav-hire:hover{background:#6D28D9 !important}
 
-/* HERO */
-#hero{
-  min-height:100vh;display:flex;align-items:center;
-  padding:8rem 3rem 4rem;position:relative;overflow:hidden;
-}
-.hero-grid-bg{
-  position:absolute;inset:0;
-  background-image:linear-gradient(rgba(124,58,237,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.06) 1px,transparent 1px);
-  background-size:60px 60px;
-}
+#hero{min-height:100vh;display:flex;align-items:center;padding:8rem 3rem 4rem;position:relative;overflow:hidden}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(124,58,237,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,0.06) 1px,transparent 1px);background-size:60px 60px}
 .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .blob1{width:400px;height:400px;background:rgba(124,58,237,0.12);top:-100px;right:10%}
 .blob2{width:300px;height:300px;background:rgba(6,182,212,0.08);bottom:10%;left:5%}
 .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;width:100%}
-.hero-left{}
 .hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(124,58,237,0.1);border:0.5px solid rgba(124,58,237,0.35);color:var(--purple-light);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(16,185,129,0.4)}50%{opacity:0.7;box-shadow:0 0 0 6px rgba(16,185,129,0)}}
@@ -62,23 +50,13 @@ nav ul li a:hover{color:var(--purple-light)}
 .btn-wa:hover{background:#1EBD5A;transform:scale(1.04)}
 .btn-ghost{background:transparent;color:var(--text);padding:0.85rem 1.8rem;border:0.5px solid rgba(241,240,255,0.2);cursor:pointer;font-family:'Inter',sans-serif;font-size:0.88rem;border-radius:8px;text-decoration:none;display:inline-block;transition:border-color 0.2s,color 0.2s,transform 0.2s}
 .btn-ghost:hover{border-color:var(--purple-light);color:var(--purple-light);transform:scale(1.04)}
-
-/* HERO AVATAR */
 .hero-right{position:relative;flex-shrink:0}
 .avatar-wrap{position:relative;width:260px;height:260px}
 .avatar-ring{width:260px;height:260px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;background:var(--surface);position:relative;overflow:hidden}
 .avatar-ring::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(124,58,237,0.15),transparent 70%)}
 .avatar-initials{font-family:'Syne',sans-serif;font-size:4rem;font-weight:800;color:var(--purple-light);position:relative;z-index:1}
-
-/* FLOATING CARDS */
-.float-card{
-  position:absolute;background:var(--card);border:0.5px solid var(--border);
-  border-radius:12px;padding:0.65rem 0.9rem;
-  font-size:0.75rem;font-weight:600;color:var(--text);
-  display:flex;align-items:center;gap:0.5rem;
-  white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,0.3);
-}
-.float-card .fc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.float-card{position:absolute;background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:0.65rem 0.9rem;font-size:0.75rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:0.5rem;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.fc-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .fc1{top:-20px;left:-60px;animation:floatA 3s ease-in-out infinite}
 .fc2{top:30px;right:-70px;animation:floatB 3.5s ease-in-out infinite}
 .fc3{bottom:20px;left:-50px;animation:floatA 4s ease-in-out infinite 0.5s}
@@ -86,24 +64,13 @@ nav ul li a:hover{color:var(--purple-light)}
 @keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes floatB{0%,100%{transform:translateY(-6px)}50%{transform:translateY(4px)}}
 
-/* MARQUEE */
 #marquee{background:var(--purple);padding:1rem 0;overflow:hidden;border-top:0.5px solid rgba(255,255,255,0.1);border-bottom:0.5px solid rgba(255,255,255,0.1)}
-.marquee-track{display:flex;gap:0;white-space:nowrap;animation:marquee 22s linear infinite}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 22s linear infinite}
 .marquee-track:hover{animation-play-state:paused}
 .marquee-item{font-family:'Syne',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;padding:0 2.5rem;opacity:0.9}
 .marquee-dot{color:rgba(255,255,255,0.4);padding:0 0.5rem}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* SECTIONS */
-section{padding:5.5rem 3rem}
-.section-label{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple-light);font-weight:600;display:block;margin-bottom:0.75rem}
-h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.1;margin-bottom:0.75rem;letter-spacing:-0.02em}
-
-/* FADE IN */
-.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* STATS */
 #stats{background:var(--surface);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:3rem}
 .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;max-width:900px;margin:0 auto}
 .stat-item{text-align:center;padding:1.5rem 1rem;background:var(--card);border:0.5px solid var(--border);border-radius:14px;transition:border-color 0.2s}
@@ -111,7 +78,12 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--purple-light);display:block;margin-bottom:0.35rem}
 .stat-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)}
 
-/* ABOUT */
+section{padding:5.5rem 3rem}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.section-label{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--purple-light);font-weight:600;display:block;margin-bottom:0.75rem}
+h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;line-height:1.1;margin-bottom:0.75rem;letter-spacing:-0.02em}
+
 #about{background:var(--bg)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:3rem}
 .about-text p{color:var(--muted);line-height:1.85;font-weight:300;font-size:0.95rem;margin-bottom:1rem}
@@ -121,7 +93,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .astat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--purple-light)}
 .astat-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-top:0.25rem}
 
-/* SERVICES */
 #services{background:var(--surface);border-top:0.5px solid var(--border)}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
 .service-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.75rem;transition:border-color 0.2s,transform 0.2s}
@@ -132,7 +103,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .service-list li{font-size:0.8rem;color:var(--muted);display:flex;align-items:center;gap:0.5rem}
 .service-list li::before{content:"→";color:var(--purple-light);font-size:0.7rem;flex-shrink:0}
 
-/* WHY */
 #why{background:var(--bg)}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:3rem}
 .why-item{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color 0.2s,transform 0.2s}
@@ -142,7 +112,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .why-title{font-family:'Syne',sans-serif;font-size:0.92rem;font-weight:700;margin-bottom:0.4rem}
 .why-desc{font-size:0.8rem;color:var(--muted);line-height:1.65}
 
-/* PROCESS */
 #process{background:var(--surface);border-top:0.5px solid var(--border)}
 .process-track{display:flex;gap:0;margin-top:3rem;overflow-x:auto;padding-bottom:1rem}
 .process-step{flex:1;min-width:160px;text-align:center;position:relative;padding:0 1rem}
@@ -153,7 +122,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .process-title{font-family:'Syne',sans-serif;font-size:0.88rem;font-weight:700;margin-bottom:0.4rem}
 .process-desc{font-size:0.75rem;color:var(--muted);line-height:1.5}
 
-/* FEATURED PROJECT */
 #featured{background:var(--bg)}
 .featured-wrap{background:var(--card);border:0.5px solid var(--border);border-radius:20px;overflow:hidden;margin-top:3rem;display:grid;grid-template-columns:1fr 1fr}
 .featured-visual{background:linear-gradient(135deg,#1B2A4A,#2E4373,#1B2A4A);display:flex;align-items:center;justify-content:center;min-height:400px;position:relative;overflow:hidden;padding:3rem}
@@ -176,9 +144,8 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .ff-dot{width:6px;height:6px;border-radius:50%;background:var(--purple-light);flex-shrink:0}
 .featured-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
 
-/* PROJECTS */
 #work{background:var(--surface);border-top:0.5px solid var(--border)}
-.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;margin-top:3rem}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
 .work-card{border-radius:16px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;display:flex;flex-direction:column}
 .work-card:hover{transform:translateY(-8px)}
 .work-preview{height:180px;display:flex;align-items:flex-end;justify-content:flex-start;position:relative;overflow:hidden}
@@ -196,14 +163,12 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .wf{font-size:0.68rem;padding:0.22rem 0.6rem;border-radius:100px;font-weight:500}
 .work-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:600;text-decoration:none;transition:opacity 0.2s}
 .work-link:hover{opacity:0.75}
-
-/* Unique card styles */
 .card-napoli{background:linear-gradient(160deg,#1A0E08,#2D1A0E)}.card-napoli .work-body{background:#1A0E08}.card-napoli .work-subtitle{color:#F5740B}.card-napoli .wf{background:rgba(245,116,11,0.12);color:#F5740B;border:0.5px solid rgba(245,116,11,0.25)}.card-napoli .work-link{color:#F5740B}
 .card-chambers{background:linear-gradient(160deg,#0C0C14,#151520)}.card-chambers .work-body{background:#0C0C14}.card-chambers .work-subtitle{color:#C9A14A}.card-chambers .wf{background:rgba(201,161,74,0.12);color:#C9A14A;border:0.5px solid rgba(201,161,74,0.25)}.card-chambers .work-link{color:#C9A14A}
 .card-hamars{background:linear-gradient(160deg,#1A0800,#2D1200)}.card-hamars .work-body{background:#1A0800}.card-hamars .work-subtitle{color:var(--orange)}.card-hamars .wf{background:rgba(245,116,11,0.12);color:var(--orange);border:0.5px solid rgba(245,116,11,0.25)}.card-hamars .work-link{color:var(--orange)}
 .card-qfw{background:linear-gradient(160deg,#0A0D14,#141B2E)}.card-qfw .work-body{background:#0A0D14}.card-qfw .work-subtitle{color:#C9A14A}.card-qfw .wf{background:rgba(201,161,74,0.1);color:#C9A14A;border:0.5px solid rgba(201,161,74,0.2)}.card-qfw .work-link{color:#C9A14A}
+.card-rain{background:linear-gradient(160deg,#0C0A06,#1C1810)}.card-rain .work-body{background:#0C0A06}.card-rain .work-subtitle{color:#C9A14A}.card-rain .wf{background:rgba(201,161,74,0.1);color:#C9A14A;border:0.5px solid rgba(201,161,74,0.2)}.card-rain .work-link{color:#C9A14A}
 
-/* PROMISE */
 #promise{background:var(--bg)}
 .promise-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:3rem}
 .promise-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:0.85rem;transition:border-color 0.2s,transform 0.2s}
@@ -212,9 +177,8 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .promise-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700}
 .promise-desc{font-size:0.82rem;color:var(--muted);line-height:1.65}
 
-/* BUILDING */
 #building{background:var(--surface);border-top:0.5px solid var(--border)}
-.building-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:3rem}
+.building-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:3rem}
 .building-card{background:var(--card);border:0.5px solid var(--border);border-radius:14px;padding:1.5rem;transition:border-color 0.2s}
 .building-card:hover{border-color:var(--amber)}
 .building-top{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem}
@@ -222,10 +186,9 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .building-title{font-family:'Syne',sans-serif;font-size:0.95rem;font-weight:700}
 .building-status{font-size:0.72rem;color:var(--amber);font-weight:600;margin-bottom:0.5rem}
 .progress-bar-wrap{background:rgba(255,255,255,0.06);border-radius:100px;height:6px;margin-bottom:0.5rem;overflow:hidden}
-.progress-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--purple),var(--cyan));transition:width 1s ease}
+.progress-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--purple),var(--cyan))}
 .progress-label{font-size:0.72rem;color:var(--muted)}
 
-/* TECH */
 #tech{background:var(--bg)}
 .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem}
 .tech-group-title{font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;margin-bottom:1.25rem}
@@ -233,7 +196,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .tech-pill{font-size:0.78rem;padding:0.4rem 1rem;border-radius:100px;background:var(--card);border:0.5px solid var(--border);color:var(--muted);cursor:default;transition:border-color 0.2s,color 0.2s,box-shadow 0.2s}
 .tech-pill:hover{border-color:var(--purple-light);color:var(--purple-light);box-shadow:0 0 12px rgba(167,139,250,0.2)}
 
-/* CONTACT */
 #contact{background:var(--surface);border-top:0.5px solid var(--border)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem}
 .contact-channels{display:flex;flex-direction:column;gap:0.85rem;margin-bottom:1.5rem}
@@ -256,7 +218,6 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weigh
 .form-btns{display:flex;gap:0.75rem;flex-wrap:wrap}
 .form-status{font-size:0.82rem;color:var(--green);margin-top:0.5rem;display:none}
 
-/* FOOTER */
 footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem 2rem}
 .footer-top{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:0.5px solid var(--border)}
 .footer-headline{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;line-height:1.15;margin-bottom:1.5rem}
@@ -277,30 +238,8 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 .footer-links a:hover{color:var(--purple-light)}
 .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.25)}
 
-/* DIVIDERS */
-.divider-slant{height:50px;background:var(--surface);clip-path:polygon(0 0,100% 0,100% 100%,0 0);margin-bottom:-1px}
-.divider-slant-rev{height:50px;background:var(--bg);clip-path:polygon(0 0,100% 0,100% 100%,0 0);margin-bottom:-1px}
-
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-right{display:none}
-  .featured-wrap{grid-template-columns:1fr}
-  .featured-visual{min-height:200px}
-  .footer-top{grid-template-columns:1fr}
-  .tech-grid{grid-template-columns:1fr;gap:2rem}
-}
-@media(max-width:768px){
-  nav{padding:1rem 1.5rem}
-  nav ul{display:none}
-  #hero{padding:7rem 1.5rem 3rem}
-  section{padding:4rem 1.5rem}
-  #stats{padding:2rem 1.5rem}
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
-  .about-stats{display:none}
-  .channel-action{display:none}
-  footer{padding:3rem 1.5rem 2rem}
-  .process-track{gap:0.5rem}
-}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-right{display:none}.featured-wrap{grid-template-columns:1fr}.featured-visual{min-height:200px}.footer-top{grid-template-columns:1fr}.tech-grid{grid-template-columns:1fr;gap:2rem}}
+@media(max-width:768px){nav{padding:1rem 1.5rem}nav ul{display:none}#hero{padding:7rem 1.5rem 3rem}section{padding:4rem 1.5rem}#stats{padding:2rem 1.5rem}.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}.about-stats{display:none}.channel-action{display:none}footer{padding:3rem 1.5rem 2rem}}
 </style>
 </head>
 <body>
@@ -318,7 +257,6 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-grid-bg"></div>
   <div class="hero-blob blob1"></div>
@@ -340,15 +278,12 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
         <div class="float-card fc2"><span class="fc-dot" style="background:var(--green)"></span>100% Responsive</div>
         <div class="float-card fc3"><span class="fc-dot" style="background:var(--cyan)"></span>AI Powered</div>
         <div class="float-card fc4"><span class="fc-dot" style="background:var(--amber)"></span>Cyber Security</div>
-        <div class="avatar-ring">
-          <span class="avatar-initials">IS</span>
-        </div>
+        <div class="avatar-ring"><span class="avatar-initials">IS</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div id="marquee">
   <div class="marquee-track">
     <span class="marquee-item">Web Development</span><span class="marquee-dot">•</span>
@@ -361,6 +296,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     <span class="marquee-item">Restaurants</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Logistics</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Fashion</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">Luxury Brands</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Prompt Engineering</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Web Development</span><span class="marquee-dot">•</span>
     <span class="marquee-item">AI Automation</span><span class="marquee-dot">•</span>
@@ -372,32 +308,28 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     <span class="marquee-item">Restaurants</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Logistics</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Fashion</span><span class="marquee-dot">•</span>
+    <span class="marquee-item">Luxury Brands</span><span class="marquee-dot">•</span>
     <span class="marquee-item">Prompt Engineering</span><span class="marquee-dot">•</span>
   </div>
 </div>
 
-<!-- STATS -->
 <div id="stats">
   <div class="stats-grid fade-in">
     <div class="stat-item"><span class="stat-num" data-target="5">0</span><div class="stat-label">Projects Built</div></div>
     <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Mobile Responsive</div></div>
     <div class="stat-item"><span class="stat-num">24/7</span><div class="stat-label">Support Available</div></div>
     <div class="stat-item"><span class="stat-num">AI</span><div class="stat-label">Powered Workflow</div></div>
-    <div class="stat-item"><span class="stat-num" data-target="4">0</span><div class="stat-label">Industries Served</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="5">0</span><div class="stat-label">Industries Served</div></div>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
-  <div class="fade-in">
-    <span class="section-label">About Me</span>
-    <h2>Who is Ibrahim?</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">About Me</span><h2>Who is Ibrahim?</h2></div>
   <div class="about-grid fade-in" style="transition-delay:0.1s">
     <div class="about-text">
       <p>I am Ibrahim Sulayman — a web developer and AI automation consultant who helps businesses build a credible digital presence. My background is in Cyber Security, which means every solution I build comes with an awareness of digital safety that most developers overlook.</p>
       <p>What sets my work apart is how I build it. I use cutting-edge AI tools to design, develop, and deploy websites faster and more precisely than traditional development — without cutting corners on quality. This means faster delivery, lower cost, and results that actually reflect your business.</p>
-      <p>I have worked with restaurants, law firms, logistics companies, and fashion brands. Whether you need a website from scratch, want to automate your business operations with AI, or need a cleaner digital strategy — I am the person to call.</p>
+      <p>I have worked with restaurants, law firms, logistics companies, fashion brands, and luxury retailers. Whether you need a website from scratch, want to automate your business operations with AI, or need a cleaner digital strategy — I am the person to call.</p>
       <a href="#contact" class="btn-primary" style="margin-top:0.5rem;display:inline-block">Let's Work Together</a>
     </div>
     <div class="about-stats">
@@ -409,19 +341,15 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
-  <div class="fade-in">
-    <span class="section-label">What I Offer</span>
-    <h2>Services I Provide</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">What I Offer</span><h2>Services I Provide</h2></div>
   <div class="services-grid fade-in" style="transition-delay:0.1s">
     <div class="service-card">
       <div class="service-icon" style="background:rgba(6,182,212,0.15)">💻</div>
       <div class="service-title">Website Development</div>
       <ul class="service-list">
         <li>Business Websites</li><li>Restaurant & Food Businesses</li>
-        <li>Law Firm & Corporate Sites</li><li>Portfolio Websites</li>
+        <li>Law Firm & Corporate Sites</li><li>Luxury & Fashion Brands</li>
         <li>Landing Pages</li><li>E-Commerce Catalogues</li>
       </ul>
     </div>
@@ -446,12 +374,8 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- WHY -->
 <section id="why">
-  <div class="fade-in">
-    <span class="section-label">Why Choose Me</span>
-    <h2>What Makes My Work Different</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">Why Choose Me</span><h2>What Makes My Work Different</h2></div>
   <div class="why-grid fade-in" style="transition-delay:0.1s">
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Mobile Responsive Designs</div><div class="why-desc">Every site I build works perfectly on phones, tablets, and desktops — without exception.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Modern User Experience</div><div class="why-desc">Clean interfaces that are easy to navigate and make your business look premium.</div></div>
@@ -462,52 +386,19 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- PROCESS -->
 <section id="process">
-  <div class="fade-in">
-    <span class="section-label">How I Work</span>
-    <h2>My Process</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">How I Work</span><h2>My Process</h2></div>
   <div class="process-track fade-in" style="transition-delay:0.1s">
-    <div class="process-step">
-      <div class="process-num">01</div>
-      <div class="process-icon">🔍</div>
-      <div class="process-title">Discovery</div>
-      <div class="process-desc">Understanding your business, goals, and what you need from your digital presence.</div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">02</div>
-      <div class="process-icon">📋</div>
-      <div class="process-title">Planning</div>
-      <div class="process-desc">Mapping out the structure, features, and content flow before a single line of code.</div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">03</div>
-      <div class="process-icon">🎨</div>
-      <div class="process-title">Design</div>
-      <div class="process-desc">Building the visual identity — colours, layout, and user experience tailored to your brand.</div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">04</div>
-      <div class="process-icon">⚙️</div>
-      <div class="process-title">Development</div>
-      <div class="process-desc">Writing clean, functional code and connecting all features — forms, cart, booking, and more.</div>
-    </div>
-    <div class="process-step">
-      <div class="process-num">05</div>
-      <div class="process-icon">🚀</div>
-      <div class="process-title">Launch</div>
-      <div class="process-desc">Deploying your site live, connecting your domain, and handing over a fully working product.</div>
-    </div>
+    <div class="process-step"><div class="process-num">01</div><div class="process-icon">🔍</div><div class="process-title">Discovery</div><div class="process-desc">Understanding your business, goals, and what you need from your digital presence.</div></div>
+    <div class="process-step"><div class="process-num">02</div><div class="process-icon">📋</div><div class="process-title">Planning</div><div class="process-desc">Mapping out structure, features, and content flow before a single line of code.</div></div>
+    <div class="process-step"><div class="process-num">03</div><div class="process-icon">🎨</div><div class="process-title">Design</div><div class="process-desc">Building the visual identity — colours, layout, and user experience tailored to your brand.</div></div>
+    <div class="process-step"><div class="process-num">04</div><div class="process-icon">⚙️</div><div class="process-title">Development</div><div class="process-desc">Writing clean, functional code and connecting all features — forms, cart, booking, and more.</div></div>
+    <div class="process-step"><div class="process-num">05</div><div class="process-icon">🚀</div><div class="process-title">Launch</div><div class="process-desc">Deploying your site live, connecting your domain, and handing over a fully working product.</div></div>
   </div>
 </section>
 
-<!-- FEATURED PROJECT -->
 <section id="featured">
-  <div class="fade-in">
-    <span class="section-label">Featured Project</span>
-    <h2>The One That Shows Everything</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">Featured Project</span><h2>The One That Shows Everything</h2></div>
   <div class="featured-wrap fade-in" style="transition-delay:0.1s">
     <div class="featured-visual">
       <div class="featured-mockup">
@@ -520,10 +411,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
           <div class="mockup-content">
             <div class="mc-line" style="width:60%"></div>
             <div class="mc-line" style="width:40%;background:rgba(201,161,74,0.3)"></div>
-            <div class="mc-grid">
-              <div class="mc-card"></div><div class="mc-card"></div>
-              <div class="mc-card"></div><div class="mc-card"></div>
-            </div>
+            <div class="mc-grid"><div class="mc-card"></div><div class="mc-card"></div><div class="mc-card"></div><div class="mc-card"></div></div>
             <div class="mc-line" style="width:80%;margin-top:0.4rem"></div>
             <div class="mc-line" style="width:55%"></div>
           </div>
@@ -534,13 +422,12 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       <span class="featured-tag">🛍️ Fashion & E-Commerce</span>
       <div class="featured-title">QFW Collectionz</div>
       <div class="featured-sub">Full Modest Fashion Catalogue with WhatsApp Checkout</div>
-      <p class="featured-desc">A complete e-commerce style website for a Nigerian modest fashion brand — built with a real product catalogue, cart system, category filtering, size and colour selection, wholesale pricing section, brand story, and a seamless WhatsApp checkout flow. One of the most feature-rich sites in the portfolio.</p>
+      <p class="featured-desc">A complete e-commerce style website for a Nigerian modest fashion brand — built with a real product catalogue, cart system, category filtering, size and colour selection, wholesale pricing section, brand story, and a seamless WhatsApp checkout flow.</p>
       <div class="featured-features">
         <div class="ff-item"><div class="ff-dot"></div>13 real products with actual pricing across 5 categories</div>
         <div class="ff-item"><div class="ff-dot"></div>Cart system with WhatsApp order message formatting</div>
         <div class="ff-item"><div class="ff-dot"></div>Wholesale section with MOQ and discount structure</div>
         <div class="ff-item"><div class="ff-dot"></div>Brand story, delivery info, Ekiti store address</div>
-        <div class="ff-item"><div class="ff-dot"></div>Floating WhatsApp button visible throughout</div>
       </div>
       <div class="featured-btns">
         <a href="https://sample-qfw-collectionz.netlify.app" target="_blank" class="btn-primary">View Live Sample →</a>
@@ -550,86 +437,85 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- ALL PROJECTS -->
 <section id="work">
-  <div class="fade-in">
-    <span class="section-label">All Projects</span>
-    <h2>Everything I've Built</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">All Projects</span><h2>Everything I've Built</h2></div>
   <div class="work-grid fade-in" style="transition-delay:0.1s">
+
     <div class="work-card card-napoli">
       <div class="work-preview" style="background:linear-gradient(160deg,#2A1205,#1A0A00)">
-        <div class="overlay"></div>
-        <span class="work-preview-emoji">🍕</span>
+        <div class="overlay"></div><span class="work-preview-emoji">🍕</span>
         <span class="work-status s-live">Live</span>
       </div>
       <div class="work-body">
         <div class="work-title">Bella Napoli</div>
         <div class="work-subtitle">Restaurant Website</div>
         <div class="work-desc">Italian restaurant site with dynamic menu filters, table reservation, and customer reviews. Bold warm brand identity.</div>
-        <div class="work-feats">
-          <span class="wf">Online Menu</span><span class="wf">Reservations</span><span class="wf">Reviews</span>
-        </div>
+        <div class="work-feats"><span class="wf">Online Menu</span><span class="wf">Reservations</span><span class="wf">Reviews</span></div>
         <a href="https://isulayman5002-cpu.github.io/bella-napoli" target="_blank" class="work-link">View Live →</a>
       </div>
     </div>
+
     <div class="work-card card-chambers">
       <div class="work-preview" style="background:linear-gradient(160deg,#0C0C14,#141520)">
-        <div class="overlay"></div>
-        <span class="work-preview-emoji">⚖️</span>
+        <div class="overlay"></div><span class="work-preview-emoji">⚖️</span>
         <span class="work-status s-live">Live</span>
       </div>
       <div class="work-body">
         <div class="work-title">Sulaymaniyyah Chambers</div>
         <div class="work-subtitle">Law Firm Website</div>
         <div class="work-desc">Corporate law firm site with practice areas, partner profiles, dual office locations, and client enquiry form.</div>
-        <div class="work-feats">
-          <span class="wf">Practice Areas</span><span class="wf">Profiles</span><span class="wf">Corporate</span>
-        </div>
+        <div class="work-feats"><span class="wf">Practice Areas</span><span class="wf">Profiles</span><span class="wf">Corporate</span></div>
         <a href="https://sulaymaniyyah-chambers.netlify.app" target="_blank" class="work-link">View Live →</a>
       </div>
     </div>
+
     <div class="work-card card-hamars">
       <div class="work-preview" style="background:linear-gradient(160deg,#2A1000,#1A0800)">
-        <div class="overlay"></div>
-        <span class="work-preview-emoji">🏍️</span>
+        <div class="overlay"></div><span class="work-preview-emoji">🏍️</span>
         <span class="work-status s-sample">Live Sample</span>
       </div>
       <div class="work-body">
         <div class="work-title">Hamars Ride</div>
         <div class="work-subtitle">Logistics & Delivery</div>
         <div class="work-desc">Delivery company site with booking form, city coverage, live reviews, star ratings, and WhatsApp integration.</div>
-        <div class="work-feats">
-          <span class="wf">Booking</span><span class="wf">WhatsApp</span><span class="wf">Reviews</span>
-        </div>
+        <div class="work-feats"><span class="wf">Booking</span><span class="wf">WhatsApp</span><span class="wf">Reviews</span></div>
         <a href="https://sample-hamars-ride.netlify.app" target="_blank" class="work-link">View Sample →</a>
       </div>
     </div>
+
     <div class="work-card card-qfw">
       <div class="work-preview" style="background:linear-gradient(160deg,#0A0D18,#121B30)">
-        <div class="overlay"></div>
-        <span class="work-preview-emoji">🛍️</span>
+        <div class="overlay"></div><span class="work-preview-emoji">🛍️</span>
         <span class="work-status s-sample">Live Sample</span>
       </div>
       <div class="work-body">
         <div class="work-title">QFW Collectionz</div>
         <div class="work-subtitle">Fashion & E-Commerce</div>
         <div class="work-desc">Modest fashion catalogue with cart, product filters, size/colour selection, and WhatsApp checkout system.</div>
-        <div class="work-feats">
-          <span class="wf">Catalogue</span><span class="wf">Cart</span><span class="wf">Wholesale</span>
-        </div>
+        <div class="work-feats"><span class="wf">Catalogue</span><span class="wf">Cart</span><span class="wf">Wholesale</span></div>
         <a href="https://sample-qfw-collectionz.netlify.app" target="_blank" class="work-link">View Sample →</a>
       </div>
     </div>
+
+    <div class="work-card card-rain">
+      <div class="work-preview" style="background:linear-gradient(160deg,#0C0A06,#1C1810)">
+        <div class="overlay"></div><span class="work-preview-emoji">✨</span>
+        <span class="work-status s-sample">Live Sample</span>
+      </div>
+      <div class="work-body">
+        <div class="work-title">Rain Collection</div>
+        <div class="work-subtitle">Luxury Fashion Brand</div>
+        <div class="work-desc">Premium luxury modest fashion site with gold editorial design, product catalogue across abayas, jewelleries, and perfumes, cart system, and WhatsApp checkout.</div>
+        <div class="work-feats"><span class="wf">Luxury Design</span><span class="wf">3 Categories</span><span class="wf">Cart & WhatsApp</span></div>
+        <a href="https://rain-collection.netlify.app" target="_blank" class="work-link">View Sample →</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- MY PROMISE -->
 <section id="promise">
-  <div class="fade-in">
-    <span class="section-label">What to Expect</span>
-    <h2>My Promise to Every Client</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">What to Expect</span><h2>My Promise to Every Client</h2></div>
   <div class="promise-grid fade-in" style="transition-delay:0.1s">
     <div class="promise-card"><div class="promise-icon">💬</div><div class="promise-title">Clear Communication</div><div class="promise-desc">You'll always know what's happening with your project. No ghosting, no confusion, no surprises.</div></div>
     <div class="promise-card"><div class="promise-icon">📦</div><div class="promise-title">Professional Delivery</div><div class="promise-desc">Every project is delivered on time, fully functional, and ready to represent your business.</div></div>
@@ -638,13 +524,15 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- CURRENTLY BUILDING -->
 <section id="building">
-  <div class="fade-in">
-    <span class="section-label">Active Pipeline</span>
-    <h2>Currently Building</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">Active Pipeline</span><h2>Currently Building</h2></div>
   <div class="building-grid fade-in" style="transition-delay:0.1s">
+    <div class="building-card">
+      <div class="building-top"><span class="building-emoji">✨</span><div class="building-title">Rain Collection — Final Version</div></div>
+      <div class="building-status">Proposal Sent — Awaiting Response</div>
+      <div class="progress-bar-wrap"><div class="progress-fill" style="width:55%"></div></div>
+      <div class="progress-label">55% — Sample complete, proposal delivered</div>
+    </div>
     <div class="building-card">
       <div class="building-top"><span class="building-emoji">🛍️</span><div class="building-title">QFW Collectionz — Final Version</div></div>
       <div class="building-status">In Proposal Stage</div>
@@ -657,21 +545,11 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       <div class="progress-bar-wrap"><div class="progress-fill" style="width:75%"></div></div>
       <div class="progress-label">75% — Proposal sent, awaiting response</div>
     </div>
-    <div class="building-card">
-      <div class="building-top"><span class="building-emoji">💈</span><div class="building-title">Barbershop Sample Site</div></div>
-      <div class="building-status">Development Phase</div>
-      <div class="progress-bar-wrap"><div class="progress-fill" style="width:30%"></div></div>
-      <div class="progress-label">30% — Portfolio sample in progress</div>
-    </div>
   </div>
 </section>
 
-<!-- TECH -->
 <section id="tech">
-  <div class="fade-in">
-    <span class="section-label">Stack & Experience</span>
-    <h2>Technologies & Industries</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">Stack & Experience</span><h2>Technologies & Industries</h2></div>
   <div class="tech-grid fade-in" style="transition-delay:0.1s">
     <div>
       <div class="tech-group-title">Technologies I Work With</div>
@@ -687,18 +565,14 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       <div class="tech-pills">
         <span class="tech-pill">Restaurants & Food</span><span class="tech-pill">Logistics & Delivery</span>
         <span class="tech-pill">Law Firms</span><span class="tech-pill">Fashion & Retail</span>
-        <span class="tech-pill">Personal Brands</span><span class="tech-pill">Professional Services</span>
+        <span class="tech-pill">Luxury Brands</span><span class="tech-pill">Personal Brands</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-  <div class="fade-in">
-    <span class="section-label">Get In Touch</span>
-    <h2>Let's Work Together</h2>
-  </div>
+  <div class="fade-in"><span class="section-label">Get In Touch</span><h2>Let's Work Together</h2></div>
   <div class="contact-grid fade-in" style="transition-delay:0.1s">
     <div>
       <div class="contact-channels">
@@ -723,24 +597,15 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
           <div class="channel-action">View →</div>
         </a>
       </div>
-      <div class="contact-note"><span>● Usually responds within 24 hours</span> · Based in Lagos, Nigeria · Open to remote work worldwide</div>
+      <div class="contact-note"><span>● Usually responds within 24 hours</span> · Based in Abuja, Nigeria · Open to remote work worldwide</div>
     </div>
     <div>
       <div class="cf-title">Send a Message</div>
       <div class="cf-note">💡 Pricing is tailored to each project. Get in touch and let's discuss what works for your budget and timeline.</div>
       <form id="contactForm" action="https://formspree.io/f/mbdejgne" method="POST">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" name="email" placeholder="john@example.com" required>
-        </div>
-        <div class="form-group">
-          <label>What do you need?</label>
-          <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-        </div>
+        <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="John Doe" required></div>
+        <div class="form-group"><label>Your Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
+        <div class="form-group"><label>What do you need?</label><textarea name="message" placeholder="Tell me about your project..." required></textarea></div>
         <div class="form-btns">
           <button type="submit" class="btn-primary" style="flex:1" id="submitBtn">Send Message</button>
           <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20get%20a%20quote." target="_blank" class="btn-ghost">Get a Quote →</a>
@@ -751,7 +616,6 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-top">
     <div>
@@ -765,37 +629,20 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       <a href="#contact" class="btn-primary">Contact Me →</a>
     </div>
     <div class="footer-right">
-      <div class="footer-contact-item">
-        <div class="fci-label">WhatsApp</div>
-        <div class="fci-val"><a href="https://wa.me/2348160095723">+234 816 009 5723</a></div>
-      </div>
-      <div class="footer-contact-item">
-        <div class="fci-label">Email</div>
-        <div class="fci-val"><a href="mailto:isulayman5002@gmail.com">isulayman5002@gmail.com</a></div>
-      </div>
-      <div class="footer-contact-item">
-        <div class="fci-label">Telegram</div>
-        <div class="fci-val"><a href="https://t.me/dg_ibrahim00">@dg_ibrahim00</a></div>
-      </div>
-      <div class="footer-contact-item">
-        <div class="fci-label">GitHub</div>
-        <div class="fci-val"><a href="https://github.com/isulayman5002-cpu" target="_blank">isulayman5002-cpu</a></div>
-      </div>
-      <div class="footer-contact-item">
-        <div class="fci-label">Location</div>
-        <div class="fci-val">Lagos, Nigeria · Remote Worldwide</div>
-      </div>
+      <div class="footer-contact-item"><div class="fci-label">WhatsApp</div><div class="fci-val"><a href="https://wa.me/2348160095723">+234 816 009 5723</a></div></div>
+      <div class="footer-contact-item"><div class="fci-label">Email</div><div class="fci-val"><a href="mailto:isulayman5002@gmail.com">isulayman5002@gmail.com</a></div></div>
+      <div class="footer-contact-item"><div class="fci-label">Telegram</div><div class="fci-val"><a href="https://t.me/dg_ibrahim00">@dg_ibrahim00</a></div></div>
+      <div class="footer-contact-item"><div class="fci-label">GitHub</div><div class="fci-val"><a href="https://github.com/isulayman5002-cpu" target="_blank">isulayman5002-cpu</a></div></div>
+      <div class="footer-contact-item"><div class="fci-label">Location</div><div class="fci-val">Abuja, Nigeria · Remote Worldwide</div></div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-logo">Ibrahim Sulayman</div>
     <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#services">Services</a>
+      <a href="#work">Work</a><a href="#contact">Contact</a>
     </div>
-    <div class="footer-copy">© 2026 · Built with purpose.</div>
+    <div class="footer-copy">© 2026 · Built with purpose. Open to opportunities.</div>
   </div>
 </footer>
 
@@ -803,40 +650,27 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 const progressBar=document.getElementById('progress-bar');
 window.addEventListener('scroll',()=>{
   const h=document.documentElement;
-  const pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
-  progressBar.style.width=pct+'%';
+  progressBar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%';
 });
-
-const observer=new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
-},{threshold:0.12});
+const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
-
 const counters=document.querySelectorAll('[data-target]');
-const countObserver=new IntersectionObserver((entries)=>{
+const cObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      const el=e.target;
-      const target=parseInt(el.getAttribute('data-target'));
-      let current=0;
-      const inc=target/40;
-      const timer=setInterval(()=>{
-        current+=inc;
-        if(current>=target){current=target;clearInterval(timer);}
-        el.textContent=Math.floor(current)+(target===5?'+':'');
-      },30);
-      countObserver.unobserve(el);
+      const el=e.target,target=parseInt(el.getAttribute('data-target'));
+      let cur=0;const inc=target/40;
+      const t=setInterval(()=>{cur+=inc;if(cur>=target){cur=target;clearInterval(t);}el.textContent=Math.floor(cur)+'+';},30);
+      cObs.unobserve(el);
     }
   });
 },{threshold:0.5});
-counters.forEach(c=>countObserver.observe(c));
-
+counters.forEach(c=>cObs.observe(c));
 const form=document.getElementById('contactForm');
 const btn=document.getElementById('submitBtn');
 const status=document.getElementById('formStatus');
 form.addEventListener('submit',async function(e){
-  e.preventDefault();
-  btn.textContent='Sending...';btn.style.opacity='0.7';btn.disabled=true;
+  e.preventDefault();btn.textContent='Sending...';btn.style.opacity='0.7';btn.disabled=true;
   const data=new FormData(form);
   try{
     const res=await fetch('https://formspree.io/f/mbdejgne',{method:'POST',body:data,headers:{'Accept':'application/json'}});
