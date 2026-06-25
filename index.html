@@ -240,12 +240,49 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-right{display:none}.featured-wrap{grid-template-columns:1fr}.featured-visual{min-height:200px}.footer-top{grid-template-columns:1fr}.tech-grid{grid-template-columns:1fr;gap:2rem}}
 @media(max-width:768px){nav{padding:1rem 1.5rem}nav ul{display:none}#hero{padding:7rem 1.5rem 3rem}section{padding:4rem 1.5rem}#stats{padding:2rem 1.5rem}.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}.about-stats{display:none}.channel-action{display:none}footer{padding:3rem 1.5rem 2rem}}
-</style>
+
+.icon{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;flex-shrink:0;vertical-align:-0.125em}
+.service-icon .icon,.channel-icon .icon{width:1.4em;height:1.4em}
+.work-preview-emoji{font-size:1rem !important}
+.work-preview-emoji .icon{width:3rem;height:3rem;stroke-width:1.4}
+.process-icon .icon{width:1.4em;height:1.4em;stroke-width:1.8}
+.promise-icon .icon{width:1.5em;height:1.5em;stroke-width:1.75}
+.building-emoji .icon{width:1.4em;height:1.4em;stroke-width:1.8}
+.featured-tag .icon{vertical-align:-0.15em;margin-right:0.35em;stroke-width:2.2}
+.cf-note .icon{margin-right:0.4em;stroke-width:2}
+.btn-wa .icon{margin-right:0.1em;stroke-width:2.2}
+.wa-float{color:#fff}.wa-float .icon{width:1.5em;height:1.5em;stroke-width:2.2}</style>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+<defs>
+<symbol id="ic-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+<symbol id="ic-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+<symbol id="ic-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+<symbol id="ic-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+<symbol id="ic-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+<symbol id="ic-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></symbol>
+<symbol id="ic-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+<symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="ic-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 12h6M9 16h6"/></symbol>
+<symbol id="ic-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></symbol>
+<symbol id="ic-gear" viewBox="0 0 24 24"><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="ic-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+<symbol id="ic-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+<symbol id="ic-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+<symbol id="ic-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+<symbol id="ic-bike" viewBox="0 0 24 24"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></symbol>
+<symbol id="ic-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4M19 17v4M3 5h4M17 19h4"/></symbol>
+<symbol id="ic-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+<symbol id="ic-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="ic-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="ic-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+</defs>
+</svg>
+
 
 <div id="progress-bar"></div>
-<a href="https://wa.me/2348160095723" target="_blank" class="wa-float">💬</a>
+<a href="https://wa.me/2348160095723" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><svg class="icon" aria-hidden="true"><use href="#ic-msg"/></svg></a>
 
 <nav>
   <div class="logo">IS<span>.</span></div>
@@ -269,7 +306,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       <p class="hero-desc">I help businesses build professional websites, automate workflows, and strengthen their digital presence.</p>
       <div class="hero-btns">
         <a href="#work" class="btn-primary">See My Work</a>
-        <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="btn-wa">💬 Chat on WhatsApp</a>
+        <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="btn-wa"><svg class="icon" aria-hidden="true"><use href="#ic-msg"/></svg> Chat on WhatsApp</a>
       </div>
     </div>
     <div class="hero-right fade-in" style="transition-delay:0.2s">
@@ -277,7 +314,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
         <div class="float-card fc1"><span class="fc-dot" style="background:var(--purple-light)"></span>5+ Projects Built</div>
         <div class="float-card fc2"><span class="fc-dot" style="background:var(--green)"></span>100% Responsive</div>
         <div class="float-card fc3"><span class="fc-dot" style="background:var(--cyan)"></span>AI Powered</div>
-        <div class="float-card fc4"><span class="fc-dot" style="background:var(--amber)"></span>Cyber Security</div>
+        <div class="float-card fc4"><span class="fc-dot" style="background:var(--amber)"></span>Fast Delivery</div>
         <div class="avatar-ring"><span class="avatar-initials">IS</span></div>
       </div>
     </div>
@@ -315,11 +352,10 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
 <div id="stats">
   <div class="stats-grid fade-in">
-    <div class="stat-item"><span class="stat-num" data-target="5">0</span><div class="stat-label">Projects Built</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="5">5+</span><div class="stat-label">Projects Built</div></div>
     <div class="stat-item"><span class="stat-num">100%</span><div class="stat-label">Mobile Responsive</div></div>
     <div class="stat-item"><span class="stat-num">24/7</span><div class="stat-label">Support Available</div></div>
-    <div class="stat-item"><span class="stat-num">AI</span><div class="stat-label">Powered Workflow</div></div>
-    <div class="stat-item"><span class="stat-num" data-target="5">0</span><div class="stat-label">Industries Served</div></div>
+    <div class="stat-item"><span class="stat-num" data-target="5">5+</span><div class="stat-label">Industries Served</div></div>
   </div>
 </div>
 
@@ -334,7 +370,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     </div>
     <div class="about-stats">
       <div class="astat"><div class="astat-num">5+</div><div class="astat-label">Specializations</div></div>
-      <div class="astat"><div class="astat-num">AI</div><div class="astat-label">Powered Workflow</div></div>
+      <div class="astat"><div class="astat-num">AI</div><div class="astat-label">Automation &amp; Prompt Engineering</div></div>
       <div class="astat"><div class="astat-num">100%</div><div class="astat-label">Remote Ready</div></div>
       <div class="astat"><div class="astat-num">24h</div><div class="astat-label">Response Time</div></div>
     </div>
@@ -345,7 +381,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
   <div class="fade-in"><span class="section-label">What I Offer</span><h2>Services I Provide</h2></div>
   <div class="services-grid fade-in" style="transition-delay:0.1s">
     <div class="service-card">
-      <div class="service-icon" style="background:rgba(6,182,212,0.15)">💻</div>
+      <div class="service-icon" style="background:rgba(6,182,212,0.15);color:var(--cyan)"><svg class="icon" aria-hidden="true"><use href="#ic-monitor"/></svg></div>
       <div class="service-title">Website Development</div>
       <ul class="service-list">
         <li>Business Websites</li><li>Restaurant & Food Businesses</li>
@@ -354,7 +390,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       </ul>
     </div>
     <div class="service-card">
-      <div class="service-icon" style="background:rgba(16,185,129,0.15)">🤖</div>
+      <div class="service-icon" style="background:rgba(16,185,129,0.15);color:var(--green)"><svg class="icon" aria-hidden="true"><use href="#ic-cpu"/></svg></div>
       <div class="service-title">AI Business Automation</div>
       <ul class="service-list">
         <li>Workflow Design & Automation</li><li>AI Tool Integration</li>
@@ -363,11 +399,11 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       </ul>
     </div>
     <div class="service-card">
-      <div class="service-icon" style="background:rgba(124,58,237,0.15)">🛡️</div>
+      <div class="service-icon" style="background:rgba(124,58,237,0.15);color:var(--purple-light)"><svg class="icon" aria-hidden="true"><use href="#ic-shield"/></svg></div>
       <div class="service-title">Technical Consultation</div>
       <ul class="service-list">
         <li>Website Planning & Strategy</li><li>Digital Presence Audit</li>
-        <li>User Experience Improvements</li><li>Cybersecurity Awareness</li>
+        <li>User Experience Improvements</li><li>Security Best Practices</li>
         <li>Digital Safety Advisory</li>
       </ul>
     </div>
@@ -382,18 +418,18 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Fast Delivery</div><div class="why-desc">AI-assisted development means I build faster without sacrificing quality or detail.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">AI-Assisted Development</div><div class="why-desc">I use cutting-edge AI tools to deliver results that would take others twice as long.</div></div>
     <div class="why-item"><div class="why-check">✓</div><div class="why-title">Ongoing Support</div><div class="why-desc">I don't disappear after delivery. Retainer support keeps your site updated and functional.</div></div>
-    <div class="why-item"><div class="why-check">✓</div><div class="why-title">Cyber Security Background</div><div class="why-desc">Your website is built with digital safety in mind from the very first line of code.</div></div>
+    <div class="why-item"><div class="why-check">✓</div><div class="why-title">Security-Aware Development</div><div class="why-desc">Your website is built with digital safety in mind from the very first line of code.</div></div>
   </div>
 </section>
 
 <section id="process">
   <div class="fade-in"><span class="section-label">How I Work</span><h2>My Process</h2></div>
   <div class="process-track fade-in" style="transition-delay:0.1s">
-    <div class="process-step"><div class="process-num">01</div><div class="process-icon">🔍</div><div class="process-title">Discovery</div><div class="process-desc">Understanding your business, goals, and what you need from your digital presence.</div></div>
-    <div class="process-step"><div class="process-num">02</div><div class="process-icon">📋</div><div class="process-title">Planning</div><div class="process-desc">Mapping out structure, features, and content flow before a single line of code.</div></div>
-    <div class="process-step"><div class="process-num">03</div><div class="process-icon">🎨</div><div class="process-title">Design</div><div class="process-desc">Building the visual identity — colours, layout, and user experience tailored to your brand.</div></div>
-    <div class="process-step"><div class="process-num">04</div><div class="process-icon">⚙️</div><div class="process-title">Development</div><div class="process-desc">Writing clean, functional code and connecting all features — forms, cart, booking, and more.</div></div>
-    <div class="process-step"><div class="process-num">05</div><div class="process-icon">🚀</div><div class="process-title">Launch</div><div class="process-desc">Deploying your site live, connecting your domain, and handing over a fully working product.</div></div>
+    <div class="process-step"><div class="process-num">01</div><div class="process-icon"><svg class="icon" aria-hidden="true"><use href="#ic-search"/></svg></div><div class="process-title">Discovery</div><div class="process-desc">Understanding your business, goals, and what you need from your digital presence.</div></div>
+    <div class="process-step"><div class="process-num">02</div><div class="process-icon"><svg class="icon" aria-hidden="true"><use href="#ic-clipboard"/></svg></div><div class="process-title">Planning</div><div class="process-desc">Mapping out structure, features, and content flow before a single line of code.</div></div>
+    <div class="process-step"><div class="process-num">03</div><div class="process-icon"><svg class="icon" aria-hidden="true"><use href="#ic-palette"/></svg></div><div class="process-title">Design</div><div class="process-desc">Building the visual identity — colours, layout, and user experience tailored to your brand.</div></div>
+    <div class="process-step"><div class="process-num">04</div><div class="process-icon"><svg class="icon" aria-hidden="true"><use href="#ic-gear"/></svg></div><div class="process-title">Development</div><div class="process-desc">Writing clean, functional code and connecting all features — forms, cart, booking, and more.</div></div>
+    <div class="process-step"><div class="process-num">05</div><div class="process-icon"><svg class="icon" aria-hidden="true"><use href="#ic-rocket"/></svg></div><div class="process-title">Launch</div><div class="process-desc">Deploying your site live, connecting your domain, and handing over a fully working product.</div></div>
   </div>
 </section>
 
@@ -419,7 +455,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
       </div>
     </div>
     <div class="featured-body">
-      <span class="featured-tag">🛍️ Fashion & E-Commerce</span>
+      <span class="featured-tag"><svg class="icon" aria-hidden="true"><use href="#ic-bag"/></svg> Fashion &amp; E-Commerce</span>
       <div class="featured-title">QFW Collectionz</div>
       <div class="featured-sub">Full Modest Fashion Catalogue with WhatsApp Checkout</div>
       <p class="featured-desc">A complete e-commerce style website for a Nigerian modest fashion brand — built with a real product catalogue, cart system, category filtering, size and colour selection, wholesale pricing section, brand story, and a seamless WhatsApp checkout flow.</p>
@@ -443,7 +479,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
     <div class="work-card card-napoli">
       <div class="work-preview" style="background:linear-gradient(160deg,#2A1205,#1A0A00)">
-        <div class="overlay"></div><span class="work-preview-emoji">🍕</span>
+        <div class="overlay"></div><span class="work-preview-emoji"><svg class="icon" aria-hidden="true"><use href="#ic-utensils"/></svg></span>
         <span class="work-status s-live">Live</span>
       </div>
       <div class="work-body">
@@ -457,7 +493,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
     <div class="work-card card-chambers">
       <div class="work-preview" style="background:linear-gradient(160deg,#0C0C14,#141520)">
-        <div class="overlay"></div><span class="work-preview-emoji">⚖️</span>
+        <div class="overlay"></div><span class="work-preview-emoji"><svg class="icon" aria-hidden="true"><use href="#ic-scale"/></svg></span>
         <span class="work-status s-live">Live</span>
       </div>
       <div class="work-body">
@@ -471,7 +507,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
     <div class="work-card card-hamars">
       <div class="work-preview" style="background:linear-gradient(160deg,#2A1000,#1A0800)">
-        <div class="overlay"></div><span class="work-preview-emoji">🏍️</span>
+        <div class="overlay"></div><span class="work-preview-emoji"><svg class="icon" aria-hidden="true"><use href="#ic-bike"/></svg></span>
         <span class="work-status s-sample">Live Sample</span>
       </div>
       <div class="work-body">
@@ -485,7 +521,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
     <div class="work-card card-qfw">
       <div class="work-preview" style="background:linear-gradient(160deg,#0A0D18,#121B30)">
-        <div class="overlay"></div><span class="work-preview-emoji">🛍️</span>
+        <div class="overlay"></div><span class="work-preview-emoji"><svg class="icon" aria-hidden="true"><use href="#ic-bag"/></svg></span>
         <span class="work-status s-sample">Live Sample</span>
       </div>
       <div class="work-body">
@@ -499,7 +535,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 
     <div class="work-card card-rain">
       <div class="work-preview" style="background:linear-gradient(160deg,#0C0A06,#1C1810)">
-        <div class="overlay"></div><span class="work-preview-emoji">✨</span>
+        <div class="overlay"></div><span class="work-preview-emoji"><svg class="icon" aria-hidden="true"><use href="#ic-sparkles"/></svg></span>
         <span class="work-status s-sample">Live Sample</span>
       </div>
       <div class="work-body">
@@ -517,33 +553,30 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
 <section id="promise">
   <div class="fade-in"><span class="section-label">What to Expect</span><h2>My Promise to Every Client</h2></div>
   <div class="promise-grid fade-in" style="transition-delay:0.1s">
-    <div class="promise-card"><div class="promise-icon">💬</div><div class="promise-title">Clear Communication</div><div class="promise-desc">You'll always know what's happening with your project. No ghosting, no confusion, no surprises.</div></div>
-    <div class="promise-card"><div class="promise-icon">📦</div><div class="promise-title">Professional Delivery</div><div class="promise-desc">Every project is delivered on time, fully functional, and ready to represent your business.</div></div>
-    <div class="promise-card"><div class="promise-icon">🎯</div><div class="promise-title">Business-Focused Design</div><div class="promise-desc">Your website isn't just pretty — it's built to serve your business goals and convert visitors.</div></div>
-    <div class="promise-card"><div class="promise-icon">📱</div><div class="promise-title">Mobile Responsiveness</div><div class="promise-desc">Every site works perfectly on all devices — phones, tablets, desktops, always.</div></div>
+    <div class="promise-card"><div class="promise-icon" style="color:var(--purple-light)"><svg class="icon" aria-hidden="true"><use href="#ic-msg"/></svg></div><div class="promise-title">Clear Communication</div><div class="promise-desc">You'll always know what's happening with your project. No ghosting, no confusion, no surprises.</div></div>
+    <div class="promise-card"><div class="promise-icon" style="color:var(--cyan)"><svg class="icon" aria-hidden="true"><use href="#ic-package"/></svg></div><div class="promise-title">Professional Delivery</div><div class="promise-desc">Every project is delivered on time, fully functional, and ready to represent your business.</div></div>
+    <div class="promise-card"><div class="promise-icon" style="color:var(--pink)"><svg class="icon" aria-hidden="true"><use href="#ic-target"/></svg></div><div class="promise-title">Business-Focused Design</div><div class="promise-desc">Your website isn't just pretty — it's built to serve your business goals and convert visitors.</div></div>
+    <div class="promise-card"><div class="promise-icon" style="color:var(--green)"><svg class="icon" aria-hidden="true"><use href="#ic-phone"/></svg></div><div class="promise-title">Mobile Responsiveness</div><div class="promise-desc">Every site works perfectly on all devices — phones, tablets, desktops, always.</div></div>
   </div>
 </section>
 
 <section id="building">
-  <div class="fade-in"><span class="section-label">Active Pipeline</span><h2>Currently Building</h2></div>
+  <div class="fade-in"><span class="section-label">Currently Working On</span><h2>Currently Building</h2></div>
   <div class="building-grid fade-in" style="transition-delay:0.1s">
     <div class="building-card">
-      <div class="building-top"><span class="building-emoji">✨</span><div class="building-title">Rain Collection — Final Version</div></div>
-      <div class="building-status">Proposal Sent — Awaiting Response</div>
+      <div class="building-top"><span class="building-emoji" style="color:var(--amber)"><svg class="icon" aria-hidden="true"><use href="#ic-sparkles"/></svg></span><div class="building-title">Rain Collection — Final Version</div></div>
       <div class="progress-bar-wrap"><div class="progress-fill" style="width:55%"></div></div>
-      <div class="progress-label">55% — Sample complete, proposal delivered</div>
+      <div class="progress-label">55% — Final version in progress</div>
     </div>
     <div class="building-card">
-      <div class="building-top"><span class="building-emoji">🛍️</span><div class="building-title">QFW Collectionz — Final Version</div></div>
-      <div class="building-status">In Proposal Stage</div>
+      <div class="building-top"><span class="building-emoji" style="color:var(--amber)"><svg class="icon" aria-hidden="true"><use href="#ic-bag"/></svg></span><div class="building-title">QFW Collectionz — Final Version</div></div>
       <div class="progress-bar-wrap"><div class="progress-fill" style="width:60%"></div></div>
-      <div class="progress-label">60% — Sample complete, proposal sent</div>
+      <div class="progress-label">60% — Final version in progress</div>
     </div>
     <div class="building-card">
-      <div class="building-top"><span class="building-emoji">🏍️</span><div class="building-title">Hamars Ride — Final Version</div></div>
-      <div class="building-status">In Negotiation</div>
+      <div class="building-top"><span class="building-emoji" style="color:var(--amber)"><svg class="icon" aria-hidden="true"><use href="#ic-bike"/></svg></span><div class="building-title">Hamars Ride — Final Version</div></div>
       <div class="progress-bar-wrap"><div class="progress-fill" style="width:75%"></div></div>
-      <div class="progress-label">75% — Proposal sent, awaiting response</div>
+      <div class="progress-label">75% — Final version in progress</div>
     </div>
   </div>
 </section>
@@ -577,22 +610,22 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     <div>
       <div class="contact-channels">
         <a href="https://wa.me/2348160095723?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" class="channel">
-          <div class="channel-icon" style="background:rgba(37,211,102,0.15)">💬</div>
+          <div class="channel-icon" style="background:rgba(37,211,102,0.15);color:var(--wa)"><svg class="icon" aria-hidden="true"><use href="#ic-msg"/></svg></div>
           <div class="channel-info"><div class="channel-label">WhatsApp</div><div class="channel-val">+234 816 009 5723</div></div>
           <div class="channel-action">Chat Now →</div>
         </a>
         <a href="mailto:isulayman5002@gmail.com" class="channel">
-          <div class="channel-icon" style="background:rgba(124,58,237,0.15)">📧</div>
+          <div class="channel-icon" style="background:rgba(124,58,237,0.15);color:var(--purple-light)"><svg class="icon" aria-hidden="true"><use href="#ic-mail"/></svg></div>
           <div class="channel-info"><div class="channel-label">Email</div><div class="channel-val">isulayman5002@gmail.com</div></div>
           <div class="channel-action">Send →</div>
         </a>
         <a href="https://t.me/dg_ibrahim00" target="_blank" class="channel">
-          <div class="channel-icon" style="background:rgba(6,182,212,0.15)">✈️</div>
+          <div class="channel-icon" style="background:rgba(6,182,212,0.15);color:var(--cyan)"><svg class="icon" aria-hidden="true"><use href="#ic-send"/></svg></div>
           <div class="channel-info"><div class="channel-label">Telegram</div><div class="channel-val">@dg_ibrahim00</div></div>
           <div class="channel-action">Message →</div>
         </a>
         <a href="https://github.com/isulayman5002-cpu" target="_blank" class="channel">
-          <div class="channel-icon" style="background:rgba(245,158,11,0.15)">🐙</div>
+          <div class="channel-icon" style="background:rgba(245,158,11,0.15);color:var(--amber)"><svg class="icon" aria-hidden="true"><use href="#ic-github"/></svg></div>
           <div class="channel-info"><div class="channel-label">GitHub</div><div class="channel-val">github.com/isulayman5002-cpu</div></div>
           <div class="channel-action">View →</div>
         </a>
@@ -601,7 +634,7 @@ footer{background:#060608;border-top:0.5px solid var(--border);padding:4rem 3rem
     </div>
     <div>
       <div class="cf-title">Send a Message</div>
-      <div class="cf-note">💡 Pricing is tailored to each project. Get in touch and let's discuss what works for your budget and timeline.</div>
+      <div class="cf-note"><svg class="icon" aria-hidden="true"><use href="#ic-bulb"/></svg> Pricing is tailored to each project. Get in touch and let's discuss what works for your budget and timeline.</div>
       <form id="contactForm" action="https://formspree.io/f/mbdejgne" method="POST">
         <div class="form-group"><label>Your Name</label><input type="text" name="name" placeholder="John Doe" required></div>
         <div class="form-group"><label>Your Email</label><input type="email" name="email" placeholder="john@example.com" required></div>
